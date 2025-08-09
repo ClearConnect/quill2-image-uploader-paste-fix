@@ -13,7 +13,7 @@ class ImageUploader {
     }
 
     if (this.options.loadingClass) {
-      LoadingImage.className = this.options.loadingClass 
+      LoadingImage.className = this.options.loadingClass
     }
 
     const toolbar = this.quill.getModule("toolbar");
@@ -100,7 +100,7 @@ class ImageUploader {
 
           if (file) {
             this.range = this.quill.getSelection();
-             evt.preventDefault();
+            evt.preventDefault();
             evt.stopImmediatePropagation();
             evt.stopImmediatePropagation()
             evt.preventDefault()
