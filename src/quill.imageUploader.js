@@ -1,5 +1,5 @@
 import LoadingImage from "./blots/image.js";
-import "./quill.imageUploader.css";
+//import "./quill.imageUploader.css";
 class ImageUploader {
   constructor(quill, options) {
     this.quill = quill;
@@ -100,10 +100,17 @@ class ImageUploader {
 
           if (file) {
             this.range = this.quill.getSelection();
-            evt.preventDefault();
+             evt.preventDefault();
+            evt.stopImmediatePropagation();
+            evt.stopImmediatePropagation()
+            evt.preventDefault()
             setTimeout(() => {
               this.range = this.quill.getSelection();
-              this.readAndUploadFile(file);
+              // NEW FIX: Create a unique filename for the pasted image.
+              const uniqueFilename = `pasted-image-${Date.now()}.${file.type.split('/')[1]}`;
+              const newFile = new File([file], uniqueFilename, { type: file.type });
+
+              this.readAndUploadFile(newFile);
             }, 0);
           }
         }
