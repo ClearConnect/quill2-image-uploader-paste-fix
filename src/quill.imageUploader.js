@@ -23,7 +23,7 @@ class ImageUploader {
     this.handlePaste = this.handlePaste.bind(this);
 
     this.quill.root.addEventListener("drop", this.handleDrop, false);
-    this.quill.root.addEventListener("paste", this.handlePaste, false);
+    this.quill.root.addEventListener("paste", this.handlePaste, true);
   }
 
   selectLocalImage() {
