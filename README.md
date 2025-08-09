@@ -1,3 +1,5 @@
+#a fix for the css import and the image paste
+
 # Quill2 ImageHandler Module
 
 A module for Quill rich text editor to allow images to be uploaded to a server instead of being base64 encoded.
