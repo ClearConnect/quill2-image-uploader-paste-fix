@@ -13,7 +13,7 @@
     "scripts": {
         "watch": "webpack --watch --progress --mode production",
         "start": "webpack-dev-server --mode development",
-        "build": "webpack --mode production",
+        "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --mode production",
         "publish": "npm publish"
     },
     "keywords": [
